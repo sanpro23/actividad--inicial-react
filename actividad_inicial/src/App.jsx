@@ -1,11 +1,15 @@
 
+import Header from "./componentes/Header";
+import Footer from "./componentes/Footer";
+import { data } from "../data/data";
+
 function App() {
-  
   return (
     <>
-     <p>Santos</p>
+      <Header />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
