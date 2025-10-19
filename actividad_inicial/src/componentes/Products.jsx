@@ -1,3 +1,4 @@
+
 import Product from "./Product";
 
 function Products({ data }) {
@@ -6,7 +7,7 @@ function Products({ data }) {
       {data.map((guitar) => (
         <Product 
           key={guitar.id} 
-          guitar={guitar}
+          {...guitar}
         />
       ))}
     </main>

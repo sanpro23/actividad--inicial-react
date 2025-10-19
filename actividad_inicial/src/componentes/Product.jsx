@@ -1,11 +1,9 @@
 
 function Product({ id, name, price, image, description }) {
 
-  const imageUrl = `/${id}.webp`;
-
   return (
     <div className="producto">
-      <img src={imageUrl} alt={name} />
+      <img src={image} alt={name} />
       <h3>{name}</h3>
       <p>{price}€</p>
       <p>{description}</p>

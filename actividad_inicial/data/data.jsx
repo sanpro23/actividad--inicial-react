@@ -26,7 +26,7 @@ const data = [
     id: 4,
     name: "Pedal de efectos Boss DS-1",
     price: 80,
-    image: "4.webp",
+    image: "/4.webp",
     description: "Pedal de distorsión clásico"
   },
   {
