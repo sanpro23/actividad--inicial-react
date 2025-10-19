@@ -1,4 +1,5 @@
 
+
 function Header() {
     return (
         <header className="header">
@@ -6,7 +7,7 @@ function Header() {
                 <h1>LA SEXTA CUERDA</h1>
                 <h2>GUITARRAS SEGUNDAMANO</h2>
                 </div>
-            <img src="/cabecera.jpeg" alt="logo-header" />
+            <img src="/cabecera.webp" alt="logo-header" />
         </header >
     );
 }

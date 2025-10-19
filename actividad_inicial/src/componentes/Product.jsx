@@ -1,15 +1,15 @@
 
-function Product({ id, name, price, image, description }) {
+function Product({ name, price, image, description, alt }) {
 
   return (
     <div className="producto">
-      <img src={image} alt={name} />
+      <img src={image} alt={alt} />
       <h3>{name}</h3>
       <p>{price}€</p>
       <p>{description}</p>
-      <button>Añadir al carrito</button>
+      <button onClick={() => alert(`Añadido al carrito: ${name}`)}></button>
     </div>
   )
-}
+} 
 
 export default Product

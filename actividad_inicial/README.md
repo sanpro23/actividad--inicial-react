@@ -1,16 +1,124 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎸 La Sexta Cuerda – Actividad Inicial React
+      
+  Aplicación web desarrollada con React y Vite como parte de una actividad inicial del bootcamp. Simula una tienda de guitarras de segunda mano, con componentes reutilizables, datos dinámicos y estructura modular.
+    
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## React Compiler
+- ⚛️ React
+- ⚡ Vite
+- 📁 Estructura por componentes
+- 🖼️ Imágenes desde carpeta `public/`
+- 📦 Props dinámicas desde archivo `data.js`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📁 Estructura del proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+initial-activity/├─ index.html
+├─ data/
+│  └─ data.jsx
+│  ├─ App.jsx
+│  ├─ index.css
+│  ├─ main.jsx
+│  └─ components/
+│     ├─ Header.jsx
+│     ├─ Products.jsx
+│     ├─ Product.jsx
+│     └─ Footer.jsx
+├─ public/ 
+    |_1.webp
+    |_....
+└─ README.md
+
+
+
+---
+
+## 📦 Instalación y ejecución
+
+
+    # Clona el repositorio
+    git clone https://github.com/sanpro23/actividad--inicial-react.git
+
+    # Entra en el proyecto
+    cd actividad--inicial-react
+
+    # Instala dependencias
+    npm install
+
+    # Ejecuta en modo desarrollo
+    npm run dev
+
+🧠 Funcionalidades actuales
+
+    Renderizado de productos con nombre, precio, descripción e imagen
+
+    Componentes reutilizables (Header, Footer, Product)
+
+    Imágenes enlazadas dinámicamente por id desde carpeta public
+
+    Datos gestionados desde archivo data.js
+
+    Preparado para añadir carrito, filtros y estilos
+
+📚 Propósito educativo
+
+    Este proyecto forma parte del proceso de aprendizaje en desarrollo web con React. Está diseñado para practicar:
+
+    Estructura de componentes
+
+    Props y renderizado dinámico
+
+    Integración de imágenes desde public/
+
+    Modularidad y buenas prácticas con Vite
+
+
+👨‍💻 Autor
+
+   Antonio Santos 
+   Bootcamp de desarrollo web 
+   Linux Mint / Chrome OS / React / CSS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
