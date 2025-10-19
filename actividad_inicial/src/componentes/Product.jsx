@@ -1,10 +1,14 @@
-function Product({ guitar }) {
+
+function Product({ id, name, price, image, description }) {
+
+  const imageUrl = `/${id}.webp`;
+
   return (
     <div className="producto">
-      <img src={guitar.image} alt={guitar.name} />
-      <h3>{guitar.name}</h3>
-      <p>{guitar.description}</p>
-      <p className="precio">{guitar.price}€</p>
+      <img src={imageUrl} alt={name} />
+      <h3>{name}</h3>
+      <p>{price}€</p>
+      <p>{description}</p>
       <button>Añadir al carrito</button>
     </div>
   )
