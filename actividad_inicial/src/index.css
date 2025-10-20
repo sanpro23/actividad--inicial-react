@@ -1,0 +1,60 @@
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    margin: 0;
+    background-color: aquamarine;
+    transition: background-color 0.5s ease-in-out;
+    color: #000;
+}
+
+/*NavMenu*/
+.nav-menu {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: green;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  border-color: black;
+  border-radius: 30px;
+}
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+}
+.nav-menu a:hover {
+  background-color: darkgreen;
+}  
+.nav-menu li {
+  list-style: none;
+  display: inline-block;
+}
+.menu-frase {
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  margin-right: auto;
+  margin-left: 20px;
+} 
+
+/*Header*/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+  padding: 10px;
+  box-sizing: border-box;
+  background-image: url('mastil3.webp');
+  color: white
+}
