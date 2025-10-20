@@ -2,59 +2,152 @@
 
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     margin: 0;
-    background-color: aquamarine;
-    transition: background-color 0.5s ease-in-out;
-    color: #000;
+    background-color: lightblue;
 }
 
-/*NavMenu*/
 .nav-menu {
   display: flex;
-  justify-content:flex-end;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  width: 100%;
-  background-color: green;
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-  border-color: black;
-  border-radius: 30px;
-}
-.nav-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 20px;
-  display: block;
-}
-.nav-menu a:hover {
-  background-color: darkgreen;
-}  
-.nav-menu li {
-  list-style: none;
-  display: inline-block;
-}
-.menu-frase {
-  color: white;
-  font-weight: bold;
-  font-size: 60px;
-  margin-right: auto;
-  margin-left: 20px;
-} 
-
-/*Header*/
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: lightgray;
   padding: 10px;
-  box-sizing: border-box;
-  background-image: url('mastil3.webp');
-  color: white
+  position: sticky; /*se queda fifo al hacer scroll*/
+  z-index: 100; /*por encima de los contenidos*/
+  top: 0; /*se queda en la parte superior*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /*sombra sutil*/
+  border-radius: 10px; /*borde redondeado*/
+  background-color: blue;
+}
+
+.menu-frase{
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0.05em; /*espacio entre letras*/
+}
+
+.nav-menu span{
+ color: white;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+.nav-menu ul{
+  display: flex;
+  gap: 5px;  /*espacio entre elementos*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a{
+  color: white;
+  text-decoration: none; /*quita el subrayado*/
+  transition: color 0.5s ease-in-out; /*animacion*/ 
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  padding: 10px; 
+  border-radius: 10px;
+}
+
+.nav-menu a:hover{
+  background-color: gray;  /*fondo de hover*/
+  transform: translateY(-10px); /*se eleva un poco*/
+}
+  
+  /*header  principal*/
+  .header-modern{
+    position: relative; /*posiciona el header en relacion con el contenido*/
+    width: 100%;
+    height: 400px; /*altura del header en moviles*/
+    overflow: hidden; /*oculta el contenido que no cabe*/  
+  }
+
+  /*contenedor con la imagen de fondo*/
+  .header-background{
+    position: absolute; /*posiciona el contenedor en relacion con el header*/
+    inset:0;
+  }
+
+  .header-background img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover; /*mantiene la proporcion de la imagen*/
+  }
+   
+
+    /* Degradado de arriba a abajo: oscuro-medio-oscuro */
+    .header-overlay{
+    background: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.7),  /* 70% negro arriba */
+        rgba(0, 0, 0, 0.5),  /* 50% negro en medio */
+        rgba(0, 0, 0, 0.7)   /* 70% negro abajo */
+    );
+}
+
+    /*contenedor con el header principal*/
+    .header-content{
+      position: relative; /*posiciona el contenedor en relacion con el header*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px; /*espacio lateral para moviles*/
+      z-index: 10; /*se coloca encima de la imagen*/
+      height: 100%;
+      text-align: center;
+      flex-direction: column;
+      color: white;
+    }
+
+ 
+.header-title-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-style: italic;
+}
+
+/* Degradado blanco en la parte inferior para transición suave */
+.header-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    background: linear-gradient(to top, white, transparent);
+}
+
+/*Responsive pantallas grandes*/
+@media screen and (min-width: 768px){
+  .header-modern{
+    height: 500px; /*altura del header en tabletas*/
+    padding: 0 10px; /*espacio lateral para tabletas*/
+  }
+  .menu-frase{
+    font-size: 50px;
+  }
+  .header-title-wrapper{
+    font-size: 40px;
+  }
+}
+
+/*Responsive moviles*/
+@media screen and (max-width: 768px){
+  .nav-menu{
+    flex-direction: column; /*navegacion en columnas en moviles*/
+    padding: 10px 0; /*espacio vertical*/
+    gap: 10px; /*espacio entre elementos*/
+  }
+  nav.menu ul{
+    gap: 10px; /*espacio entre elementos*/
+    flex-wrap: wrap; /*permite que el menu se desplace*/
+    justify-content: center; /*alinea horizontalmente*/
+  }
+  .menu-frase{
+    font-size: 30px;
+  }
 }
