@@ -1,13 +1,14 @@
-
-
+/*CSS BODY*/
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-    margin: 0;
-    background-color: lightblue;
+  margin: 0;
+  background-color: lightblue;
 }
+
+/*CSS HEADER*/
 
 .nav-menu {
   display: flex;
@@ -22,88 +23,86 @@ body {
   background-color: blue;
 }
 
-.menu-frase{
+.menu-frase {
   font-size: 40px;
   font-weight: bold;
   letter-spacing: 0.05em; /*espacio entre letras*/
 }
 
-.nav-menu span{
- color: white;
+.nav-menu span {
+  color: white;
   text-align: center;
   letter-spacing: 10px;
 }
 
-.nav-menu ul{
+.nav-menu ul {
   display: flex;
-  gap: 5px;  /*espacio entre elementos*/
+  gap: 5px; /*espacio entre elementos*/
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-menu a{
+.nav-menu a {
   color: white;
   text-decoration: none; /*quita el subrayado*/
-  transition: color 0.5s ease-in-out; /*animacion*/ 
+  transition: color 0.5s ease-in-out; /*animacion*/
   font-size: 20px;
   letter-spacing: 0.05em;
-  padding: 10px; 
+  padding: 10px;
   border-radius: 10px;
 }
 
-.nav-menu a:hover{
-  background-color: gray;  /*fondo de hover*/
+.nav-menu a:hover {
+  background-color: gray; /*fondo de hover*/
   transform: translateY(-10px); /*se eleva un poco*/
 }
-  
-  /*header  principal*/
-  .header-modern{
-    position: relative; /*posiciona el header en relacion con el contenido*/
-    width: 100%;
-    height: 400px; /*altura del header en moviles*/
-    overflow: hidden; /*oculta el contenido que no cabe*/  
-  }
 
-  /*contenedor con la imagen de fondo*/
-  .header-background{
-    position: absolute; /*posiciona el contenedor en relacion con el header*/
-    inset:0;
-  }
-
-  .header-background img{
-    width: 100%;
-    height: 80%;
-    object-fit: cover; /*mantiene la proporcion de la imagen*/
-  }
-   
-
-    /* Degradado de arriba a abajo: oscuro-medio-oscuro */
-    .header-overlay{
-    background: linear-gradient(
-        to bottom, 
-        rgba(0, 0, 0, 0.7),  /* 70% negro arriba */
-        rgba(0, 0, 0, 0.5),  /* 50% negro en medio */
-        rgba(0, 0, 0, 0.7)   /* 70% negro abajo */
-    );
+/*header  principal*/
+.header-modern {
+  position: relative; /*posiciona el header en relacion con el contenido*/
+  width: 100%;
+  height: 400px; /*altura del header en moviles*/
+  overflow: hidden; /*oculta el contenido que no cabe*/
 }
 
-    /*contenedor con el header principal*/
-    .header-content{
-      position: relative; /*posiciona el contenedor en relacion con el header*/
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 20px; /*espacio lateral para moviles*/
-      z-index: 10; /*se coloca encima de la imagen*/
-      height: 100%;
-      text-align: center;
-      flex-direction: column;
-      color: white;
-    }
+/*contenedor con la imagen de fondo*/
+.header-background {
+  position: absolute; /*posiciona el contenedor en relacion con el header*/
+  inset: 0;
+}
 
- 
-.header-title-wrapper{
+.header-background img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover; /*mantiene la proporcion de la imagen*/
+}
+
+/* Degradado de arriba a abajo: oscuro-medio-oscuro */
+.header-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    /* 70% negro arriba */ rgba(0, 0, 0, 0.5),
+    /* 50% negro en medio */ rgba(0, 0, 0, 0.7) /* 70% negro abajo */
+  );
+}
+
+/*contenedor con el header principal*/
+.header-content {
+  position: relative; /*posiciona el contenedor en relacion con el header*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /*espacio lateral para moviles*/
+  z-index: 10; /*se coloca encima de la imagen*/
+  height: 100%;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+}
+
+.header-title-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,41 +112,176 @@ body {
 
 /* Degradado blanco en la parte inferior para transición suave */
 .header-fade {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 5rem;
-    background: linear-gradient(to top, white, transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background: linear-gradient(to top, white, transparent);
 }
 
 /*Responsive pantallas grandes*/
-@media screen and (min-width: 768px){
-  .header-modern{
+@media screen and (min-width: 768px) {
+  .header-modern {
     height: 500px; /*altura del header en tabletas*/
     padding: 0 10px; /*espacio lateral para tabletas*/
   }
-  .menu-frase{
+  .menu-frase {
     font-size: 50px;
   }
-  .header-title-wrapper{
+  .header-title-wrapper {
     font-size: 40px;
   }
 }
 
 /*Responsive moviles*/
-@media screen and (max-width: 768px){
-  .nav-menu{
+@media screen and (max-width: 768px) {
+  .nav-menu {
     flex-direction: column; /*navegacion en columnas en moviles*/
     padding: 10px 0; /*espacio vertical*/
     gap: 10px; /*espacio entre elementos*/
   }
-  nav.menu ul{
+  nav.menu ul {
     gap: 10px; /*espacio entre elementos*/
     flex-wrap: wrap; /*permite que el menu se desplace*/
     justify-content: center; /*alinea horizontalmente*/
   }
-  .menu-frase{
+  .menu-frase {
     font-size: 30px;
   }
+}
+
+/*CSS PRODUCT*/
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /*sombra sutil*/
+  background-color: white;
+  }
+
+  .producto :hover {
+    transform: translateY(-8px); /*se eleva un poco*/
+    cursor: pointer;  /*cursor de mano*/
+  }
+
+  .producto img {
+    width: auto;
+    height: auto;
+    object-fit: cover; /*mantiene la proporcion de la imagen*/
+    border-radius: 10px;
+  }
+
+  .producto h3 {
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .producto p {
+    font-size: 15px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .producto button {
+    font-size: 15px;
+    margin: 10px;
+    text-align: center;
+
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: bold;
+  }
+
+  .producto button:hover {
+    background-color: darkgreen;
+    transform: translateY(-5px); /*se eleva un poco*/
+  }
+
+  
+/*FOOTER*/
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  padding: 20px;
+  background-color: blue;
+  color: white;
+  gap: 20px;
+}
+
+.footer-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.footer-tienda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+}
+
+.footer-slogan {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f9a825;
+  white-space: nowrap;
+}
+
+.footer-horario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-newsletter label {
+  font-size: 20px;
+}
+
+.footer-newsletter input {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter button {
+  font-size: 20px;
+  padding: 1px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer :hover {
+  transform: translateY(-2px); /*se eleva un poco*/
 }

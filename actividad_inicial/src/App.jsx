@@ -1,7 +1,7 @@
 
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
-import { data } from "../data/data.js";
+import { data } from "../data/data.jsx";
 import Products from "./componentes/Products";
 
 
