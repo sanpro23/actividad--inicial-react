@@ -1,3 +1,13 @@
+
+/* Configuración global */
+html {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 /*CSS BODY*/
 
 body {
@@ -128,6 +138,7 @@ body {
   }
   .menu-frase {
     font-size: 50px;
+    letter-spacing: 2px; /* Reduce el espaciado en móviles */
   }
   .header-title-wrapper {
     font-size: 40px;
@@ -148,6 +159,7 @@ body {
   }
   .menu-frase {
     font-size: 30px;
+    letter-spacing: 2px; /* Reduce el espaciado en móviles */
   }
 }
 
@@ -157,7 +169,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /*distribuye el contenido*/
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -165,13 +177,13 @@ body {
   background-color: white;
   }
 
-  .producto :hover {
+  .producto:hover {
     transform: translateY(-8px); /*se eleva un poco*/
     cursor: pointer;  /*cursor de mano*/
   }
 
   .producto img {
-    width: auto;
+    max-width: 100%;
     height: auto;
     object-fit: cover; /*mantiene la proporcion de la imagen*/
     border-radius: 10px;
@@ -200,13 +212,39 @@ body {
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: bold;
+    font-weight: bold;
   }
 
   .producto button:hover {
     background-color: darkgreen;
     transform: translateY(-5px); /*se eleva un poco*/
   }
+
+  .productos-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px; /* Limita el ancho máximo */
+  box-sizing: border-box; /*Incluye el padding en el calculo del ancho*/
+  margin: 0 auto;
+  width: 100%;
+  align-items: stretch; /*los productos se alinean verticalmente*/
+}
+
+@media (max-width: 768px) {
+  .productos-container {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px; /* Reduce el padding en móviles */
+    gap: 10px; /* Reduce el gap si es necesario */
+  }
+}
+
+@media (max-width: 480px) {
+  .productos-container {
+    grid-template-columns: 1fr;
+  }
+}
 
   
 /*FOOTER*/
